@@ -9,7 +9,7 @@ public class Ejercicios {
     public Ejercicios(){
 
     }
-    
+
     public Ejercicios(int num, int resultado,int num1) {
         this.num = num;
         this.resultado = resultado;
@@ -62,4 +62,8 @@ public class Ejercicios {
         }
         return resultado;
     }
+
+    /*public int ejercicio3(int num){
+
+    }*/
 }
