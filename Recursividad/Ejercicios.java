@@ -63,7 +63,15 @@ public class Ejercicios {
         return resultado;
     }
 
-    /*public int ejercicio3(int num){
+    public int ej3(int n1,int n2){
 
-    }*/
+        int resultado=0;
+        
+        if(n2==0){
+            return 1;
+        }
+        resultado=n1*ej3(n1,n2-1);
+        
+        return resultado;
+        }
 }
