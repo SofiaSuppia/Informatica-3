@@ -5,15 +5,17 @@ public class Ejercicios {
     private int num;
     private int num1;
     private int resultado;
+    private int i;
 
     public Ejercicios(){
 
     }
 
-    public Ejercicios(int num, int resultado,int num1) {
+    public Ejercicios(int num, int resultado,int num1,int i) {
         this.num = num;
         this.resultado = resultado;
         this.num1=num1;
+        this.i=i;
     }
 
     public int getNum1() {
@@ -39,26 +41,26 @@ public class Ejercicios {
         this.resultado = resultado;
     }
 
-    public int factorial(int num){
+    public int ej1(int num){
 
         int resultado=0;
 
         if (num==0 || num==1) {
             return 1;
         }else{
-            resultado=num*factorial(num-1);
+            resultado=num*ej1(num-1);
         }
         return resultado;
     }
 
-    public int ejercicio2(int num){
+    public int ej2(int num){
 
         int resultado=0;
 
         if (num<=0) {
             return 0;
         }else{
-            resultado=num+ejercicio2(num-1);
+            resultado=num+ej2(num-1);
         }
         return resultado;
     }
@@ -73,5 +75,42 @@ public class Ejercicios {
         resultado=n1*ej3(n1,n2-1);
         
         return resultado;
+    }
+
+    public int ej4(int n1){
+
+        int resultado=0;
+        if(n1==1){
+            System.out.println(" "+n1);
+            return 1;
         }
+        System.out.print(" "+n1);
+        resultado=ej4(n1-1);
+        return resultado;
+    }
+
+    public int ej5(int n1,int n2){
+
+        int resultado=0;
+        if(n2==0){
+            return 0;
+        }
+        resultado=n1+ej5(n1,n2-1);
+        return resultado;
+    }
+
+    public void ej6(int arreglo[],int tamArreglo){
+
+        if(tamArreglo >= 0){
+            System.out.print(" "+arreglo[tamArreglo]);
+            ej6(arreglo,tamArreglo-1);
+        }
+    }
+
+    public  int ej7(int num){
+        if (num==0) {
+            return 0;
+        }
+        return (num % 2) + ej7(num/2);
+    }
 }
