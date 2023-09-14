@@ -85,7 +85,7 @@ public class MainEjercicios{
                     System.out.println("Ingrese un numero entero: ");
                     num=consola.nextInt();
                     int count = miEjercicios.ej7(num);
-                    System.out.println("El numero de unos es la representacion binaria es de "+ num + ": " + count);
+                    System.out.println("El numero de unos es la representacion binaria de "+ num + ": " + count);
                     break;
                 default:
                     System.out.println("La opcion ingresada no es valida");
