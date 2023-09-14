@@ -33,29 +33,59 @@ public class MainEjercicios{
                 case 1:
                     System.out.println("Ingrese numero 1:");
                     num= consola.nextInt();
-                    resultado=miEjercicios.factorial(num);
+                    resultado=miEjercicios.ej1(num);
                     System.out.println("El factorial de "+ num + "y el resultado es: " + resultado);
                     break;
                 case 2:
                     System.out.println("Ingrese numero 1:");
                     num= consola.nextInt();
-                    resultado=miEjercicios.ejercicio2(num);
+                    resultado=miEjercicios.ej2(num);
                     System.out.println("La suma de los primeros n enteros de"+ num + "es" + resultado);
                     break;
                 case 3:
-                    
+                    System.out.println("Ingrese un numero: ");
+                    num=consola.nextInt();
+                    System.out.println("Ingrese el exponente para elevar el numero: ");
+                    num1=consola.nextInt();
+                    resultado=miEjercicios.ej3(num,num1);
+                    System.out.println(num+" elevado a "+num1+" es "+resultado);
                     break;
                 case 4:
-                    
+                    System.out.println("Ingrese un numero: ");
+                    num=consola.nextInt();
+                    System.out.println("--Cuenta regresiva de "+num+" es: --");
+                    miEjercicios.ej4(num);
                     break;
                 case 5:
-                    
+                    System.out.println("Ingrese un numero 1: ");
+                    num=consola.nextInt();
+                    System.out.println("Ingrese un numero 2 para multiplicar el numero 1: ");
+                    num1=consola.nextInt();
+                    resultado=miEjercicios.ej5(num,num1);
+                    System.out.println();
+                    System.out.println(num+" multiplicado por "+num1+" es "+resultado);
+                    System.out.println();
                     break;
                 case 6:
-                    
+                    int tamArreglo=0;
+                    int i=0;
+                    System.out.println("Ingrese tamaño del arreglo: ");
+                    tamArreglo=consola.nextInt();
+                    int[] arreglo= new int[tamArreglo];
+                    System.out.println("Ingrese "+ tamArreglo + " numeros: ");
+                    for(i=0;i < tamArreglo;i++){
+                        arreglo[i]=consola.nextInt();
+                    }
+                    System.out.println("--Cuenta regresiva del arreglo--");
+                    miEjercicios.ej6(arreglo,tamArreglo-1);
+                    System.out.println();
+                    System.out.println("--------------------------------");
                     break;
                 case 7:
-                    
+                    System.out.println("Ingrese un numero entero: ");
+                    num=consola.nextInt();
+                    int count = miEjercicios.ej7(num);
+                    System.out.println("El numero de unos es la representacion binaria es de "+ num + ": " + count);
                     break;
                 default:
                     System.out.println("La opcion ingresada no es valida");
